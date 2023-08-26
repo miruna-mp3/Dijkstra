@@ -1,0 +1,109 @@
+.collapsible-meniu {
+    background-color: #f5f2fb;
+    /* padding: 0px 20px; */
+    /* border-bottom: 10px solid #f4d3da; */
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+	overflow: hidden;
+    position: fixed;
+	right:50%;
+	left: 50%;
+	
+	
+	margin-right: -225px;
+	margin-left : -225px;
+	
+	
+	
+}
+
+.collapsible-meniu ul {
+    list-style-type: none;
+    /* padding: 0; */
+	
+}
+.collapsible-meniu a {
+    display:block;
+    /* padding: 10px; */
+    text-decoration: none;
+	
+}
+
+.collapsible-meniu label {
+    font-family: 'Red Rose', cursive; color:#13084c;
+    font-size: 30px;
+    display: block;
+    cursor: pointer; 
+	text-align:center;
+	padding: 2px 0 0 0;
+}
+.meniu-content {
+    max-height: 0;
+    overflow: hidden;
+	font-size: 20px;
+    font-family: 'Red Rose', sans-serif;
+	color:#13084c;
+    /* padding: 0 0 0 50px; */
+	text-align:center;
+	padding: 5px 35px 5px 0;
+}
+
+
+input#meniu {
+    display: none;
+}
+
+ 
+input:checked ~ .meniu-content {
+    max-height: 100%;
+}
+
+
+
+
+
+ 
+.collapsible-meniu2 {
+    background-color: #f5f2fb; 
+    box-shadow: 0px 3px 3px 3px rgba(0,0,0,0.2);
+	overflow: hidden;
+    position: sticky;
+	
+	
+	justify-content: space-between;
+	 
+}
+
+.collapsible-meniu2 ul {
+    list-style-type: none; 
+}
+.collapsible-meniu2 a {
+    display:block; 
+    text-decoration: none;
+	
+}
+
+.collapsible-meniu2 label {
+    font-family: 'Red Rose', cursive; color:#13084c;
+    font-size: 30px;
+    display: block;
+    cursor: pointer; 
+	text-align:center;
+	padding: 2px 0 0 0;
+}
+.meniu-content2 {
+    max-height: 0;
+    overflow: hidden;
+	font-size: 20px;
+    font-family: 'Red Rose', sans-serif;
+	color:#13084c; 
+	text-align:center;
+	padding: 5px 35px 5px 0;
+}
+
+input#meniu2 {
+    display: none;
+}
+ 
+input:checked ~ .meniu-content2 {
+    max-height: 100%;
+}

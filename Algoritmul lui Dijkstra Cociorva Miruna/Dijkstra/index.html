@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Vizualizare algoritmul lui Dijkstra</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <a href="index.html">Vizualizare algoritmul lui Dijkstra</a> 
+        <a href="./instructions.html"
+          ><img
+            src="./InfoButton.ico"
+            alt="Info" 
+            style="width:90px;height:90px;"
+        /></a>
+      </div>
+
+      <div class="options">
+
+        <div>
+          <button class="outline-btn" id="add-edge-enable" onclick="addEdges()">
+            Adaugă muchii
+          </button>
+          <button class="outline-btn reset-btn" onclick="resetDrawingArea()" disabled>
+            Resetează graf
+          </button>
+        </div>
+
+        <div>
+          <input type="text" inputmode="numeric" id="source-node" placeholder="Nod de start"/>
+          <button class="outline-btn run-btn" onclick="Dijkstra(this)" disabled>
+            Start
+          </button>
+        </div>
+
+      </div>
+    </header> 
+    <div class="drawing-area"> 
+      <p class="click-instruction"> 
+      Dă click pentru a adăuga un nod pe ecran
+      </p>
+    </div>
+    <div class="path"></div> 
+    <script src="./dijkstra.js"></script>
+  </body>
+</html>

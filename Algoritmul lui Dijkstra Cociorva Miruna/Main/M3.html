@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Dijkstra</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/menu.css">
+<link rel="stylesheet" href="css/imagini.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Red+Rose">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+<style>
+body,h1,h2,h3,h4,h5,h6,.bar,button {font-family: "Roboto", sans-serif}
+h1 { font-size:40px; }
+h2 { font-size:22px; }
+p  { font-size:20px; }
+p  {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+h2 {
+   text-indent: 0px;
+}
+</style>
+<style>
+
+#myBtn {
+  display: none;
+  position: fixed;
+  
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  bottom: 40px;
+  right: 50px;
+  
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+</style>
+
+<body>
+
+        <div class="collapsible-meniu">
+            <input type="checkbox" id="meniu">
+            <label for="meniu">MENIU</label>
+            <div class="meniu-content">
+                <ul>
+            <li><a style="color:#13084c" class="nav-link1" href="index.html">Prezentarea problemei</a></li>
+          <li><a style="color:#13084c" class="nav-link1" href="M2.html"> Rezolvarea problemei</a></li>
+          <li><a style="color:#13084c" class="nav-link1" href="M3.html">Algoritm</a></li> 
+          <li><a style="color:#13084c" class="nav-link1" href="../Dijkstra/index.html"  target="_blank">Vizualizare algoritm</a></li>
+                </ul>
+            </div>
+        </div>
+    
+<button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button> 
+
+
+<header class="container backround center pagprin" >
+  <h1 class="jumbo text-white Oswald">ALGORITMUL LUI DIJKSTRA</h1>
+</header>
+ 
+<div class="pink row-padding padding-64 container padding-left-right">
+  <div>
+    <div class="twothird text-blue justify">
+      <h1 class="center">Algoritm:</h1>
+ 
+	  <div class="row">
+	  <div class="column padding-left-right">
+			<img src="./dijkstraalgo.jpg" alt="" style="height:500px">
+		</div>
+		<div class="column">
+			<img src="./repinfo.jpg" alt="" style="height:500px">
+		</div>
+		</div>
+      <h2 class="padding-top padding-left-right">
+<br>  Algoritmul lui Dijkstra determină câte un drum de cost minim de la vârful sursă x0, la fiecare dintre celelalte vârfuri ale grafului.<br>
+<br>Iniţial, singurul vârf pentru care drumul de cost minim este deja cunoscut este numai vârful sursă x0.<br>
+<br>La fiecare pas se va selecta un vârf, care nu a mai fost selectat şi care se află la distanţă minimă de mulţimea vârfurilor selectate (cele pentru care drumul de cost minim este deja determinat).<br>
+<br>Distanţa de la mulţimea vârfurilor deja selectate (să o notăm M) la un vârf oarecare yeste egală cu costul drumului de cost minim de la vârful sursă x0 la y, drum care trece numai prin vârfuri din mulţimea M.<br>
+<br>După selectarea vârfului situat la distanţă minimă de M (fie acesta y), toate distanţele de la M la vârfurile neselectate trebuie actualizate.<br>
+<br>Mai exact, să notăm d[z] distanţa de la vârful neselectat z la mulţimea M, înainte de selectarea vârfului y.<br>
+<br>Prin includerea vârfului y în mulţimea M este posibil să obţinem un drum de cost mai mic, dacă distanţa d[z] este mai mare decât distanţa până la vârful y (d[y]) + costul arcului (y, z), adică d[z]>d[y]+c[y][z]. În acest caz, distanţa de la mulţimea M la vârful z trebuie actualizată.
+<br>Pentru a putea reconstitui şi drumurile de cost minim, vom reţine pentru fiecare vârf y din graf (exceptând vârful x0) vârful care îl precedă pe drumul de cost minim de la x0 la y.<br>
+    </h2>       
+    </div> 
+  </div>
+</div>
+
+
+
+<header class="container backround center pagprin" >
+  <p class="xlarge text-white Oswald">↓ Următoarea pagină ↓</p>
+  <button class="button padding-large large margin-top"> <a href="../Dijkstra/index.html" target="_blank" class="nav-link Oswald" style="font-size:40px">Vizualizare parcurgere algoritm </a> </button>
+</header>
+
+<div class="container center opacity" style="padding-top:48px; padding-bottom:16px">
+    <h1 class="margin xlarge">Cociorvă Miruna, Cerchez Emanuela, Algoritmul lui Dijkstra</h1>
+</div>
+
+ 
+
+
+
+<script>
+
+var mybutton = document.getElementById("myBtn");
+
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
